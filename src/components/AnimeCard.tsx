@@ -26,8 +26,9 @@ export default function AnimeCard({ anime, onLike, onSkip, onWatched, readOnly =
             src={anime.coverImage}
             alt={(validTitle ? anime.title : 'Anime') + ' cover'}
             fill
+            sizes="(max-width: 768px) 100vw, 400px"
             className="object-cover"
-            onLoadingComplete={() => setImgLoaded(true)}
+            onLoad={() => setImgLoaded(true)}
           />
         ) : (
           <div className="absolute inset-0 grid place-items-center text-gray-400">No image</div>

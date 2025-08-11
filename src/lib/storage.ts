@@ -10,6 +10,7 @@ const FEEDBACK_KEY = 'animematch_feedback'; // map id -> 'like' | 'dislike'
 const HIDE_WATCHED_KEY = 'animematch_hide_watched';
 
 const isBrowser = typeof window !== 'undefined';
+const isAniListId = (id: string) => /^\d+$/.test(id);
 
 function safeReadArray(key: string): string[] {
   if (!isBrowser) return [];
@@ -32,11 +33,17 @@ function safeWriteArray(key: string, value: string[]): void {
 }
 
 export function getLikes(): string[] {
-  return safeReadArray(LIKES_KEY);
+  const raw = safeReadArray(LIKES_KEY);
+  const cleaned = raw.filter(isAniListId);
+  if (isBrowser && cleaned.length !== raw.length) safeWriteArray(LIKES_KEY, cleaned);
+  return cleaned;
 }
 
 export function getSkips(): string[] {
-  return safeReadArray(SKIPS_KEY);
+  const raw = safeReadArray(SKIPS_KEY);
+  const cleaned = raw.filter(isAniListId);
+  if (isBrowser && cleaned.length !== raw.length) safeWriteArray(SKIPS_KEY, cleaned);
+  return cleaned;
 }
 
 export function toggleLike(id: string): void {
@@ -93,7 +100,10 @@ export function hasPreferences(): boolean {
 
 /** Watched tracking */
 export function getWatched(): string[] {
-  return safeReadArray(WATCHED_KEY);
+  const raw = safeReadArray(WATCHED_KEY);
+  const cleaned = raw.filter(isAniListId);
+  if (isBrowser && cleaned.length !== raw.length) safeWriteArray(WATCHED_KEY, cleaned);
+  return cleaned;
 }
 
 export function toggleWatched(id: string): void {
@@ -109,7 +119,14 @@ export function getFeedbackMap(): Record<string, FeedbackValue> {
   try {
     const raw = window.localStorage.getItem(FEEDBACK_KEY);
     const parsed = raw ? JSON.parse(raw) : {};
-    return typeof parsed === 'object' && parsed ? parsed : {};
+    if (!(typeof parsed === 'object' && parsed)) return {};
+    const entries = Object.entries(parsed as Record<string, FeedbackValue>);
+    const cleanedEntries = entries.filter(([id]) => isAniListId(id));
+    const cleaned = Object.fromEntries(cleanedEntries) as Record<string, FeedbackValue>;
+    if (cleanedEntries.length !== entries.length) {
+      window.localStorage.setItem(FEEDBACK_KEY, JSON.stringify(cleaned));
+    }
+    return cleaned;
   } catch {
     return {};
   }
