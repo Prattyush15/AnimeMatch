@@ -4,7 +4,8 @@ import localData from '@/data/anime.json';
 import type { Anime } from '@/types';
 
 export function useAnimeData() {
-  const [items, setItems] = useState<Anime[]>(localData as unknown as Anime[]);
+  // Start empty; we will fall back to local seed only if remote fails
+  const [items, setItems] = useState<Anime[]>([]);
   const [remoteUsed, setRemoteUsed] = useState(false);
   const [page, setPage] = useState(1);
   const [hasNext, setHasNext] = useState(true);
@@ -15,12 +16,15 @@ export function useAnimeData() {
       if (!r || cancelled) return;
       const newItems = (Array.isArray(r.items) ? r.items : []).filter((a: Anime) => a && a.id && a.title && a.coverImage && Array.isArray(a.genres) && a.genres.length > 0);
       if (newItems.length) {
-        setItems(prev => {
+        // First page: replace any existing local placeholders entirely
+        setItems(prev => (prev.length === 0 ? newItems : (() => {
           const seen = new Set(prev.map(x => x.id));
-          const merged = [...prev, ...newItems.filter((x: Anime) => !seen.has(x.id))];
-          return merged;
-        });
+          return [...prev, ...newItems.filter((x: Anime) => !seen.has(x.id))];
+        })()));
         setRemoteUsed(true);
+      } else if (!newItems.length && !remoteUsed) {
+        // Remote returned nothing; fall back to local seed once
+        setItems(localData as unknown as Anime[]);
       }
       setHasNext(Boolean(r?.pageInfo?.hasNextPage));
       setPage(Number(r?.pageInfo?.nextPage || p + 1));
