@@ -1,5 +1,11 @@
 import { NextResponse } from 'next/server';
 
+// Ensure this route is always dynamic on Vercel and not cached
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
+export const runtime = 'nodejs';
+export const fetchCache = 'force-no-store';
+
 const ANILIST_GQL = 'https://graphql.anilist.co';
 
 export async function GET(request: Request) {
