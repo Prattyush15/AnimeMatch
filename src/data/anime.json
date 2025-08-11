@@ -1,0 +1,115 @@
+[
+  {
+    "id": "aot",
+    "title": "Attack on Titan",
+    "synopsis": "Humans fight for survival against Titans behind massive walls.",
+    "genres": ["Action", "Drama", "Fantasy"],
+    "episodes": 87,
+    "coverImage": "https://picsum.photos/seed/aot/600/800",
+    "year": 2013,
+    "streaming": [{ "name": "Crunchyroll", "url": "https://www.crunchyroll.com" }]
+  },
+  {
+    "id": "your-name",
+    "title": "Your Name",
+    "synopsis": "Two teenagers mysteriously swap bodies and form a deep connection.",
+    "genres": ["Romance", "Drama", "Supernatural"],
+    "episodes": 1,
+    "coverImage": "https://picsum.photos/seed/yourname/600/800",
+    "year": 2016,
+    "streaming": [{ "name": "Netflix", "url": "https://www.netflix.com" }]
+  },
+  {
+    "id": "demonslayer",
+    "title": "Demon Slayer",
+    "synopsis": "A boy joins a secret corps to avenge his family and cure his sister.",
+    "genres": ["Action", "Adventure", "Supernatural"],
+    "episodes": 55,
+    "coverImage": "https://picsum.photos/seed/demonslayer/600/800",
+    "year": 2019,
+    "streaming": [{ "name": "Hulu", "url": "https://www.hulu.com" }]
+  },
+  {
+    "id": "haikyuu",
+    "title": "Haikyuu!!",
+    "synopsis": "A short volleyball enthusiast aims to be a top player with his team.",
+    "genres": ["Sports", "Comedy", "Drama"],
+    "episodes": 85,
+    "coverImage": "https://picsum.photos/seed/haikyuu/600/800",
+    "year": 2014
+  },
+  {
+    "id": "mha",
+    "title": "My Hero Academia",
+    "synopsis": "A quirkless boy enrolls in a prestigious academy for heroes.",
+    "genres": ["Action", "Comedy", "School"],
+    "episodes": 138,
+    "coverImage": "https://picsum.photos/seed/mha/600/800",
+    "year": 2016
+  },
+  {
+    "id": "spyxfamily",
+    "title": "SPY×FAMILY",
+    "synopsis": "A spy forms a fake family, not knowing they have secrets of their own.",
+    "genres": ["Comedy", "Slice of Life", "Action"],
+    "episodes": 37,
+    "coverImage": "https://picsum.photos/seed/spyfamily/600/800",
+    "year": 2022
+  },
+  {
+    "id": "onepunchman",
+    "title": "One-Punch Man",
+    "synopsis": "A hero who defeats any enemy with a single punch seeks excitement.",
+    "genres": ["Action", "Comedy", "Sci-Fi"],
+    "episodes": 24,
+    "coverImage": "https://picsum.photos/seed/opm/600/800",
+    "year": 2015
+  },
+  {
+    "id": "jjk",
+    "title": "Jujutsu Kaisen",
+    "synopsis": "A high schooler joins a secret society to fight curses.",
+    "genres": ["Action", "Supernatural", "Dark Fantasy"],
+    "episodes": 47,
+    "coverImage": "https://picsum.photos/seed/jjk/600/800",
+    "year": 2020
+  },
+  {
+    "id": "fmab",
+    "title": "Fullmetal Alchemist: Brotherhood",
+    "synopsis": "Two brothers use alchemy to search for the Philosopher's Stone.",
+    "genres": ["Adventure", "Drama", "Fantasy"],
+    "episodes": 64,
+    "coverImage": "https://picsum.photos/seed/fmab/600/800",
+    "year": 2009
+  },
+  {
+    "id": "kaguya",
+    "title": "Kaguya-sama: Love is War",
+    "synopsis": "Two geniuses wage love mind games to make the other confess first.",
+    "genres": ["Romance", "Comedy", "School"],
+    "episodes": 37,
+    "coverImage": "https://picsum.photos/seed/kaguya/600/800",
+    "year": 2019
+  },
+  {
+    "id": "madeinabyss",
+    "title": "Made in Abyss",
+    "synopsis": "A girl descends into a giant pit to find her mother, facing horrors.",
+    "genres": ["Adventure", "Dark Fantasy", "Drama"],
+    "episodes": 25,
+    "coverImage": "https://picsum.photos/seed/mia/600/800",
+    "year": 2017
+  },
+  {
+    "id": "vinlandsaga",
+    "title": "Vinland Saga",
+    "synopsis": "A young warrior seeks revenge in a brutal Viking world.",
+    "genres": ["Action", "Historical", "Drama"],
+    "episodes": 48,
+    "coverImage": "https://picsum.photos/seed/vinland/600/800",
+    "year": 2019
+  }
+]
+
+
