@@ -155,8 +155,8 @@ export default function SwipeDeck() {
             dragElastic={0.2}
             onDragEnd={onDragEnd}
           >
-            <div className="pointer-events-none absolute left-4 top-4 rounded-md border-2 border-green-600 px-3 py-1 text-sm font-bold text-green-700" style={{ opacity: likeOpacity }}>TO WATCH</div>
-            <div className="pointer-events-none absolute right-4 top-4 rounded-md border-2 border-red-600 px-3 py-1 text-sm font-bold text-red-700" style={{ opacity: skipOpacity }}>PASS</div>
+            <motion.div className="pointer-events-none absolute left-4 top-4 rounded-md border-2 border-green-600 px-3 py-1 text-sm font-bold text-green-700" style={{ opacity: likeOpacity }}>TO WATCH</motion.div>
+            <motion.div className="pointer-events-none absolute right-4 top-4 rounded-md border-2 border-red-600 px-3 py-1 text-sm font-bold text-red-700" style={{ opacity: skipOpacity }}>PASS</motion.div>
             <AnimeCard
               anime={current}
               onLike={() => handleDecision('right')}
