@@ -154,5 +154,3 @@ The app is deployed on Vercel with automatic deployments from the main branch.
 Found a bug or have a suggestion? Please [open an issue](https://github.com/Prattyush15/AnimeMatch/issues).
 
 ---
-
-**Made with ❤️ for anime fans by anime fans**
