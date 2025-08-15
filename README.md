@@ -1,18 +1,18 @@
-# AnimeMatch 🎌
+# AnimeMatch
 
 A smart anime recommendation app that learns your preferences through swiping and provides personalized suggestions based on your taste.
 
 **Live Demo:** [anime-match-ten.vercel.app](https://anime-match-ten.vercel.app)
 
-## ✨ Features
+## Features
 
-### 🎯 Smart Recommendations
+### Smart Recommendations
 - **Cold Start Quiz**: First-time users select favorite genres to kickstart recommendations
 - **Intelligent Scoring**: Uses genre overlap and user feedback to rank anime
 - **Learning Algorithm**: Improves recommendations based on your "liked" and "disliked" feedback
 - **Real-time Data**: Fetches fresh anime data from AniList GraphQL API
 
-### 🎴 Interactive Swipe Deck
+### Interactive Swipe Deck
 - **Gesture Controls**: Swipe right to add to watch list, left to pass, up for "watched"
 - **Keyboard Shortcuts**: 
   - `L` = Add to Watch List
@@ -21,18 +21,18 @@ A smart anime recommendation app that learns your preferences through swiping an
 - **Smooth Animations**: Powered by Framer Motion for fluid interactions
 - **Infinite Scroll**: Automatically loads more anime as you swipe
 
-### 📝 Personal Lists
+### Personal Lists
 - **To Watch**: Save anime you want to watch later
 - **Watched**: Track what you've already seen with like/dislike feedback
 - **Smart Filtering**: Never see the same anime twice across lists
 
-### 🎨 Modern UI/UX
+### Modern UI/UX
 - **Responsive Design**: Works perfectly on mobile and desktop
 - **Dark Theme**: Easy on the eyes for long browsing sessions
 - **Toast Notifications**: Instant feedback with undo options
 - **Modal Details**: Rich anime information with trailers and scores
 
-## 🚀 Tech Stack
+## Tech Stack
 
 - **Framework**: Next.js 14 (App Router) + TypeScript
 - **Styling**: Tailwind CSS + shadcn/ui components
@@ -41,7 +41,7 @@ A smart anime recommendation app that learns your preferences through swiping an
 - **Storage**: LocalStorage (client-side persistence)
 - **Deployment**: Vercel
 
-## 🏗️ Project Structure
+##  Project Structure
 
 ```
 src/
@@ -63,7 +63,7 @@ src/
 └── types.ts              # TypeScript definitions
 ```
 
-## 🛠️ Local Development
+## Local Development
 
 ### Prerequisites
 - Node.js 18+ 
@@ -92,7 +92,7 @@ npm run start        # Start production server
 npm run lint         # Run ESLint
 ```
 
-## 🎮 How to Use
+## How to Use
 
 1. **First Visit**: Complete the genre preference quiz to set up your profile
 2. **Home Page**: Swipe through personalized anime recommendations
@@ -103,7 +103,7 @@ npm run lint         # Run ESLint
 4. **Watched**: Rate anime you've seen to improve recommendations
 5. **How To**: Edit preferences or reset all data
 
-## 🧠 Recommendation Algorithm
+## Recommendation Algorithm
 
 The app uses a multi-factor scoring system:
 
@@ -112,7 +112,7 @@ The app uses a multi-factor scoring system:
 3. **Cold Start Handling**: Emphasizes genre preferences for new users
 4. **Smart Filtering**: Excludes already seen, passed, or disliked anime
 
-## 🔧 Configuration
+## Configuration
 
 ### Environment Variables
 No environment variables required - the app uses public APIs and client-side storage.
@@ -120,21 +120,21 @@ No environment variables required - the app uses public APIs and client-side sto
 ### API Configuration
 The app proxies AniList requests through `/api/anilist` to handle CORS and caching.
 
-## 📊 Data & Privacy
+## Data & Privacy
 
 - **No Server Database**: All user data stored locally in browser
 - **No Authentication**: No accounts or personal data collection
 - **API Usage**: Fetches public anime data from AniList
 - **Reset Option**: Full data reset available in settings
 
-## 🚀 Deployment
+## Deployment
 
 The app is deployed on Vercel with automatic deployments from the main branch.
 
 ### Deploy Your Own
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/Prattyush15/AnimeMatch)
 
-## 🤝 Contributing
+## Contributing
 
 1. Fork the repository
 2. Create a feature branch (`git checkout -b feature/amazing-feature`)
@@ -142,18 +142,14 @@ The app is deployed on Vercel with automatic deployments from the main branch.
 4. Push to branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-## 📝 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - [AniList](https://anilist.co/) for providing the anime database API
 - [shadcn/ui](https://ui.shadcn.com/) for beautiful UI components
 - [Framer Motion](https://www.framer.com/motion/) for smooth animations
 - [Vercel](https://vercel.com/) for seamless deployment
 
-## 🐛 Issues & Feedback
+## Issues & Feedback
 
 Found a bug or have a suggestion? Please [open an issue](https://github.com/Prattyush15/AnimeMatch/issues).
 
